@@ -1,6 +1,6 @@
-## Understanding Check - AJAX and Front End Routing!
+## Understanding Check - React.js!
 
-Hello! This is a small exercise that should take you about 30 minutes to an hour. It's possible that you'll get stuck and it will take longer. If that's the case, don't get frustrated! Take it one step at a time. It's a bit open ended.
+Hello! This is a small exercise that should take you about 30 minutes to an hour. It's possible that you'll get stuck and it will take longer. If that's the case, don't get frustrated! Take it one step at a time. It's a bit open ended. Might be fun to do with a friend!
 
 The purpose is to check your understanding of:
   - Using React.js to control our front-end views
