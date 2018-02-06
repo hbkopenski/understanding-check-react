@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar.jsx';
 import Critters from './Critters.jsx';
+import axios from 'axios';
 
 /*
 
@@ -16,14 +17,30 @@ import Critters from './Critters.jsx';
 
 export default class Main extends Component {
 
+  constructor(){
+    super();
+    this.state = {
+      critters: [],
+    }
+    this.selectCritters = this.selectCritters.bind(this)
+  }
+
+  selectCritters(critter){
+    axios.get(`/api/${critter}`)
+    .then(res => res.data)
+    .then(critters => {
+      this.setState({critters})
+    })
+  }
+
   render() {
     return (
       <div>
         <div id="header">
           <h1>Gallery of Cute</h1>
         </div>
-        <Navbar />
-        <Critters />
+        <Navbar selectCritters={this.selectCritters}/>
+        <Critters critters={this.state.critters}/>
       </div>
     )
   }
